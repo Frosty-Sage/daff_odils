@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Keetnashak ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Quicksand',sans-serif;
+overflow-x:hidden;
+background:#fff5f8;
+}
+
+/* Opening */
+
+.opening{
+height:100vh;
+background:linear-gradient(135deg,#ffd6e7,#ffffff,#ffb3c6);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.opening h1{
+font-family:'Dancing Script',cursive;
+font-size:4rem;
+color:#d6336c;
+}
+
+.opening p{
+margin-top:15px;
+color:#a61e4d;
+font-size:1.1rem;
+}
+
+.envelope{
+font-size:6rem;
+margin:20px;
+animation:bounce 2s infinite;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+background:#ff4d88;
+color:white;
+font-size:1rem;
+cursor:pointer;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(-10px);
+}
+}
+
+/* Scrapbook */
+
+.scrapbook{
+display:none;
+background:#ffeff5;
+padding:40px 20px;
+}
+
+.section{
+background:white;
+max-width:800px;
+margin:40px auto;
+padding:30px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.section h2{
+font-family:'Dancing Script',cursive;
+font-size:2.5rem;
+color:#d6336c;
+margin-bottom:15px;
+}
+
+.cute{
+font-size:4rem;
+margin:20px 0;
+}
+
+.scroll-text{
+font-size:1.2rem;
+line-height:2;
+color:#444;
+}
+
+.letter-btn{
+margin-top:15px;
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:1000;
+}
+
+.modal-content{
+background:white;
+max-width:700px;
+padding:30px;
+border-radius:25px;
+line-height:2;
+color:#444;
+position:relative;
+}
+
+.close{
+position:absolute;
+top:10px;
+right:20px;
+cursor:pointer;
+font-size:1.5rem;
+}
+
+.final{
+text-align:center;
+padding:100px 20px;
+}
+
+.final h1{
+font-family:'Dancing Script',cursive;
+font-size:4rem;
+color:#d6336c;
+}
+
+.final p{
+font-size:1.2rem;
+margin-top:20px;
+color:#555;
+}
+
+</style>
+</head>
+<body>
+
+<div class="opening">
+
+<h1>For My Keetnashak ❤️</h1>
+
+<p>I made this little world just for you 🎀</p>
+
+<div class="envelope">💌</div>
+
+<button onclick="openWorld()">
+Open My Surprise 🌸
+</button>
+
+</div>
+
+<div class="scrapbook" id="world">
+
+<div class="section">
+<div class="cute">🐈‍⬛🤍🐈</div>
+<h2>Our Tiny World</h2>
+<p class="scroll-text">
+Just a little corner of the internet
+where everything reminds me of you.
+</p>
+</div>
+
+<div class="section">
+<div class="cute">🎀🌙✨</div>
+<h2>Things I Like About You</h2>
+
+<p class="scroll-text">
+Your smile 🌸<br>
+Your voice 🎀<br>
+Your kindness 💖<br>
+The way you stay 💕<br>
+The way you care 🌙
+</p>
+
+</div>
+
+<div class="section">
+<div class="cute">🧸🌷💞</div>
+<h2>Small Letter</h2>
+
+<button class="letter-btn"
+onclick="openSmallLetter()">
+Open 💌
+</button>
+
+</div>
+
+<div class="section">
+<div class="cute">🌹💖☄️</div>
+<h2>Big Letter</h2>
+
+<button class="letter-btn"
+onclick="openBigLetter()">
+Open 💝
+</button>
+
+</div>
+
+<div class="final">
+
+<div style="font-size:5rem;">🌹🌹🌹</div>
+
+<h1>I Love You ❤️</h1>
+
+<p>
+No matter what happens,<br>
+you'll always be one of the most special people in my life.<br><br>
+
+Thank you for coming into my life 🎀
+</p>
+
+</div>
+
+</div>
+
+<div class="modal" id="smallLetter">
+
+<div class="modal-content">
+
+<span class="close"
+onclick="closeModal('smallLetter')">✖</span>
+
+<h2>💌</h2>
+
+Thankyou for coming into my life 🎀
+and sending the "hi" that started it all 🍂
+
+<br><br>
+
+My dear goddess 🌙
+
+</div>
+
+</div>
+
+<div class="modal" id="bigLetter">
+
+<div class="modal-content">
+
+<span class="close"
+onclick="closeModal('bigLetter')">✖</span>
+
+<h2>💖</h2>
+
+You'll always be the most special girl 💖 for me.
+
+<br><br>
+
+I just love you so so much forever ♾️
+
+<br><br>
+
+I can't wait to call you mine 🎀☄️
+
+<br><br>
+
+I've made so many mistakes and you still choose me always 💝
+
+<br><br>
+
+You're my everything miss wifey 💕
+
+</div>
+
+</div>
+
+<script>
+
+function openWorld(){
+document.querySelector(".opening").style.display="none";
+document.getElementById("world").style.display="block";
+}
+
+function openSmallLetter(){
+document.getElementById("smallLetter").style.display="flex";
+}
+
+function openBigLetter(){
+document.getElementById("bigLetter").style.display="flex";
+}
+
+function closeModal(id){
+document.getElementById(id).style.display="none";
+}
+
+</script>
+
+</body>
+</html>
